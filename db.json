@@ -1,0 +1,12 @@
+{
+  "courses": [
+    {
+      "name": "art",
+      "description": "sa;dnsdvn",
+      "date": "2022-09-09",
+      "price": 1200,
+      "duration": "20",
+      "id": 3
+    }
+  ]
+}
