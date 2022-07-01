@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddCourse from "./components/AddCourse/AddCourse";
 import CourseList from "./components/CourseList/CourseList";
 import EditCourse from "./components/EditCourse/EditCourse";
+import Favs from "./components/Favs/Favs";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
@@ -21,6 +22,7 @@ const Routing = () => {
           <Route path="/add-course" element={<AddCourse />} />
           <Route path="/list" element={<CourseList />} />
           <Route path="/courses/edit/:id" element={<EditCourse />} />
+          <Route path="/favs" element={<Favs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -3,12 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import AuthContextProvider from "./components/contexts/authContext";
 import Routing from "./Routing";
 import CoursesContextProvider from "./components/contexts/courseContext";
+import FavContextProvider from "./components/contexts/favContext";
 
 const App = () => {
   return (
     <AuthContextProvider>
       <CoursesContextProvider>
-        <Routing />
+        <FavContextProvider>
+          <Routing />
+        </FavContextProvider>
       </CoursesContextProvider>
     </AuthContextProvider>
   );

@@ -17,10 +17,17 @@ import { Button } from "@mui/material";
 import { Box } from "@mui/system";
 import { useNavigate } from "react-router-dom";
 import { courseContext } from "../contexts/courseContext";
+import { favContext } from "../contexts/favContext";
+import { red } from "@mui/material/colors";
+
+const color = red[500];
 
 export default function CourseCard({ item }) {
   const navigate = useNavigate();
   const { deleteCourse } = React.useContext(courseContext);
+  const { addCourseToFav, checkCourseInFav } = React.useContext(favContext);
+  const [checkCourse, setCheckCourse] = React.useState(checkCourseInFav(item));
+
   return (
     <Card
       style={{
@@ -28,13 +35,17 @@ export default function CourseCard({ item }) {
         padding: "10px",
         border: "1px solid",
         boxShadow: "1px 2px 9px #F4AAB9",
-        width: "250px",
+        width: "350px",
       }}
-      sx={{ maxWidth: 300 }}
+      sx={{ maxWidth: 350 }}
       display="flex">
       <CardHeader
         style={{ textAlign: "center", height: "50px" }}
         title={item.name}
+      />
+      <CardHeader
+        style={{ textAlign: "center", height: "50px" }}
+        title={item.category}
       />
       <CardMedia
         style={{
@@ -81,8 +92,14 @@ export default function CourseCard({ item }) {
         </Button>
       </Box>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton
+          aria-label="add to favorites"
+          onClick={() => {
+            addCourseToFav(item);
+            setCheckCourse(checkCourseInFav(item));
+          }}>
+          <FavoriteIcon color={checkCourse ? "secondary" : "disabled"} />
+          Add to favs
         </IconButton>
 
         <IconButton onClick={() => navigate(`/courses/edit/${item.id}`)}>

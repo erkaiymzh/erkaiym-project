@@ -7,6 +7,43 @@
       "price": 1200,
       "duration": "20",
       "id": 3
+    },
+    {
+      "name": "ancient history",
+      "description": "skdfnlknsafe",
+      "image": "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
+      "date": "2022-02-20",
+      "price": 10000,
+      "duration": "20",
+      "id": 4
+    },
+    {
+      "name": "mimimimim",
+      "description": ";askdfc asd ",
+      "image": "lsadkNcflaks",
+      "date": "2002-02-02",
+      "price": 2000,
+      "duration": "20",
+      "id": 5
+    },
+    {
+      "name": "lasfm;l",
+      "description": "kekgke",
+      "image": "lamf",
+      "date": "2222-02-20",
+      "price": 3033,
+      "duration": "10",
+      "id": 6
+    },
+    {
+      "name": "",
+      "description": "",
+      "image": "",
+      "date": "",
+      "price": "",
+      "duration": "",
+      "category": "Cinema",
+      "id": 7
     }
   ]
 }

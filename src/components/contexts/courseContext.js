@@ -8,14 +8,17 @@ export const courseContext = React.createContext();
 const INIT_STATE = {
   courses: [],
   oneCourse: null,
+  pages: 0,
 };
 
 function reducer(state = INIT_STATE, action) {
+  console.log(action.payload);
   switch (action.type) {
     case "GET_COURSES":
       return {
         ...state,
-        courses: action.payload,
+        courses: action.payload.data,
+        pages: Math.ceil(action.payload.headers["x-total-count"] / 3),
       };
     case "GET_ONE_COURSE":
       return { ...state, oneCourse: action.payload };
@@ -35,7 +38,7 @@ const CoursesContextProvider = ({ children }) => {
     let res = await axios(`${API}${window.location.search}`);
     dispatch({
       type: "GET_COURSES",
-      payload: res.data,
+      payload: res,
     });
   }
   console.log(state.courses);
@@ -62,6 +65,7 @@ const CoursesContextProvider = ({ children }) => {
       value={{
         courses: state.courses,
         oneCourse: state.oneCourse,
+        pages: state.pages,
         createCourse,
         getCourses,
         deleteCourse,

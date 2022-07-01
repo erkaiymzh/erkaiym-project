@@ -6,6 +6,7 @@ import {
   FormHelperText,
   InputAdornment,
   InputLabel,
+  MenuItem,
   OutlinedInput,
   TextField,
   Typography,
@@ -13,6 +14,25 @@ import {
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { courseContext } from "../contexts/courseContext";
+
+const categories = [
+  {
+    label: "Art",
+    value: "Art",
+  },
+  {
+    label: "Cinema",
+    value: "Cinema",
+  },
+  {
+    label: "History",
+    value: "History",
+  },
+  {
+    label: "Lecture",
+    value: "Lecture",
+  },
+];
 
 const AddCourse = () => {
   const { createCourse } = useContext(courseContext);
@@ -23,6 +43,11 @@ const AddCourse = () => {
   const [price, setPrice] = useState("");
   const [duration, setDuration] = useState("");
   const navigate = useNavigate();
+  const [category, setCategory] = React.useState("");
+
+  const handleChange = event => {
+    setCategory(event.target.value);
+  };
 
   function handleValues() {
     let newCourse = {
@@ -32,6 +57,7 @@ const AddCourse = () => {
       date,
       price,
       duration,
+      category,
     };
     createCourse(newCourse);
     navigate("/list");
@@ -55,6 +81,19 @@ const AddCourse = () => {
           value={name}
           onChange={e => setName(e.target.value)}
         />
+
+        <TextField
+          id="outlined-select-currency"
+          select
+          label="Select category"
+          value={category}
+          onChange={handleChange}>
+          {categories.map(option => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </TextField>
 
         <TextField
           id="outlined-basic"
