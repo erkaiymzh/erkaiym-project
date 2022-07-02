@@ -13,7 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -78,17 +78,6 @@ export default function Header() {
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit">
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -107,14 +96,15 @@ export default function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" style={{ backgroundColor: "black" }}>
         <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
+          <img
+            style={{
+              borderRadius: "50px",
+              height: "40px",
+              width: "40px",
+              marginRight: "8px",
+            }}
+            src="https://www.creativefabrica.com/wp-content/uploads/2021/01/23/Letter-S-SS-Logo-Design-Simple-Vector-Graphics-8004353-1-312x208.jpg"
+          />
           <Typography
             style={{ fontWeight: "200px", cursor: "pointer" }}
             onClick={() => navigate("/")}>
@@ -123,15 +113,25 @@ export default function Header() {
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit">
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <IconButton
+            <Link
+              to="/list"
+              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              Courses
+            </Link>
+            <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
+            <Link
+              to="/favs"
+              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              Favourites
+            </Link>
+            <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
+
+            <Link
+              to="/login"
+              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              Log In
+            </Link>
+            {/* <IconButton
               size="large"
               edge="end"
               aria-label="account of current user"
@@ -141,8 +141,17 @@ export default function Header() {
               color="inherit">
               <AccountCircle />
               <ExitToAppOutlinedIcon />
-            </IconButton>
+            </IconButton> */}
           </Box>
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            style={{ marginLeft: "10px", marginTop: "10px" }}
+            aria-label="open drawer"
+            sx={{ mr: 2 }}>
+            <MenuIcon />
+          </IconButton>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -150,7 +159,7 @@ export default function Header() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              color="inherit">
+              style={{ color: "white" }}>
               <MoreIcon />
             </IconButton>
           </Box>

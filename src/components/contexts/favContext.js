@@ -16,7 +16,6 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         favs: action.payload,
-        count: action.payload.products.length,
       };
     default:
       return state;
@@ -45,7 +44,7 @@ const FavContextProvider = ({ children }) => {
       favs.courses.push(newFav); //здесь добавили продукт в корзину
     }
     localStorage.setItem("favs", JSON.stringify(favs));
-    // getCourses();
+    getFavs();
   }
 
   function checkCourseInFav(course) {
@@ -60,9 +59,35 @@ const FavContextProvider = ({ children }) => {
     return isCourseInFavs;
   }
 
+  function getFavs() {
+    let favs = JSON.parse(localStorage.getItem("favs"));
+    if (!favs) {
+      favs = {
+        courses: [],
+      };
+    }
+    dispatch({
+      type: "GET_FAV",
+      payload: favs,
+    });
+  }
+
+  function deleteFromFavs(id) {
+    let favs = JSON.parse(localStorage.getItem("favs"));
+    favs.courses = favs.courses.filter(item => item.item.id != id);
+    localStorage.setItem("favs", JSON.stringify(favs));
+    getFavs();
+  }
+
   return (
     <favContext.Provider
-      value={{ favs: state.favs, addCourseToFav, checkCourseInFav }}>
+      value={{
+        favs: state.favs,
+        addCourseToFav,
+        checkCourseInFav,
+        getFavs,
+        deleteFromFavs,
+      }}>
       {children}
     </favContext.Provider>
   );

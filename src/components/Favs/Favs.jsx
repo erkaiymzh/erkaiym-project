@@ -16,18 +16,26 @@ import { favContext } from "../contexts/favContext";
 
 export default function Favs() {
   const navigate = useNavigate();
-  const { favs } = useContext(favContext);
+  const { favs, getFavs, deleteFromFavs } = useContext(favContext);
   // console.log(cart);
+
+  useEffect(() => {
+    getFavs();
+  }, []);
+
   return (
     <Container>
+      <Typography variant="h4" style={{ textAlign: "center", margin: "10px" }}>
+        My favourites
+      </Typography>
+
       <TableContainer component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table sx={{ minWidth: 600 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Product</TableCell>
+              <TableCell align="center"></TableCell>
+              <TableCell align="right">Course</TableCell>
               <TableCell align="right">Price</TableCell>
-              <TableCell align="right">Count</TableCell>
-              <TableCell align="right">SubPrice</TableCell>
               <TableCell align="right">Info</TableCell>
             </TableRow>
           </TableHead>
@@ -41,30 +49,16 @@ export default function Favs() {
                     key={row.item.id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                     <TableCell component="th" scope="row">
-                      {row.item.title}
+                      <img
+                        src={row.item.image}
+                        style={{ width: "100px", height: "70px" }}
+                      />
                     </TableCell>
+                    <TableCell align="right">{row.item.name}</TableCell>
                     <TableCell align="right">{row.item.price}</TableCell>
                     <TableCell align="right">
-                      {/* <IconButton
-                        onClick={() =>
-                          changeProductCount(row.count - 1, row.item.id)
-                        }
-                        aria-label="delete">
-                        <RemoveIcon />
-                      </IconButton>
-                      {row.count}
                       <IconButton
-                        onClick={() =>
-                          changeProductCount(row.count + 1, row.item.id)
-                        }
-                        aria-label="delete">
-                        <AddIcon />
-                      </IconButton> */}
-                    </TableCell>
-                    <TableCell align="right">{row.subPrice}</TableCell>
-                    <TableCell align="right">
-                      <IconButton
-                        // onClick={() => deleteFromCart(row.item.id)}
+                        onClick={() => deleteFromFavs(row.item.id)}
                         aria-label="delete">
                         <DeleteIcon />
                       </IconButton>
