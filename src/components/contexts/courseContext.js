@@ -12,7 +12,7 @@ const INIT_STATE = {
 };
 
 function reducer(state = INIT_STATE, action) {
-  console.log(action.payload);
+  // console.log(action.payload);
   switch (action.type) {
     case "GET_COURSES":
       return {

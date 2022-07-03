@@ -45,5 +45,19 @@
       "category": "Cinema",
       "id": 7
     }
+  ],
+  "comments": [
+    {
+      "comment": "lkasnfe",
+      "id": 1
+    },
+    {
+      "comment": "",
+      "id": 2
+    },
+    {
+      "comment": "sadfe",
+      "id": 3
+    }
   ]
 }

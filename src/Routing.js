@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AddCourse from "./components/AddCourse/AddCourse";
+import Comments from "./components/Comments/Comments";
 import CourseList from "./components/CourseList/CourseList";
+import Details from "./components/Details/Details";
 import EditCourse from "./components/EditCourse/EditCourse";
 import Favs from "./components/Favs/Favs";
 import Footer from "./components/Footer/Footer";
@@ -22,7 +24,9 @@ const Routing = () => {
           <Route path="/add-course" element={<AddCourse />} />
           <Route path="/list" element={<CourseList />} />
           <Route path="/courses/edit/:id" element={<EditCourse />} />
+          <Route path="/courses/details/:id" element={<Details />} />
           <Route path="/favs" element={<Favs />} />
+          <Route path="/comments" element={<Comments />} />
         </Routes>
         <Footer />
       </BrowserRouter>

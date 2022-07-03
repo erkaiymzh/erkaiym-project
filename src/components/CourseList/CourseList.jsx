@@ -2,6 +2,7 @@ import { FormatAlignJustify } from "@mui/icons-material";
 import { Box, Container, Pagination } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import AddComment from "../Comments/AddComment.jsx";
 import { courseContext } from "../contexts/courseContext";
 import CourseCard from "../CourseCard/CourseCard";
 import Filtration from "../Filtration/Filtration";

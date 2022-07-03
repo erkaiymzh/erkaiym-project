@@ -84,13 +84,25 @@ const Filtration = ({ search, setSearch }) => {
         marginTop: "20px",
       }}>
       <Box>
-        <Search style={{ width: "100px", border: "1px" }}>
+        <Search
+          style={{
+            display: "flex",
+            width: "400px",
+            height: "42px",
+            margin: "20px",
+            paddingLeft: "15px",
+            borderRadius: "50px",
+            border: "2px solid black",
+            outline: "none",
+            position: "relative",
+            transition: ".3s linear",
+          }}>
           <SearchIconWrapper>
             <SearchIcon />
           </SearchIconWrapper>
           <StyledInputBase
             value={search}
-            style={{ color: "black" }}
+            style={{ color: "black", border: "1px" }}
             placeholder="Search for a course"
             inputProps={{ "aria-label": "search" }}
             onChange={e => setSearch(e.target.value)}

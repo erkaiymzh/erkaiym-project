@@ -43,10 +43,7 @@ export default function CourseCard({ item }) {
         style={{ textAlign: "center", height: "50px" }}
         title={item.name}
       />
-      <CardHeader
-        style={{ textAlign: "center", height: "50px" }}
-        title={item.category}
-      />
+      <CardHeader style={{ textAlign: "center" }} title={item.category} />
       <CardMedia
         style={{
           objectFit: "fill",
@@ -81,14 +78,23 @@ export default function CourseCard({ item }) {
       <Box
         style={{
           display: "flex",
-          justifyContent: "flex-start",
+          justifyContent: "center",
           padding: "10px",
+          margin: "0 5px 0 5px",
         }}>
+        <Button
+          style={{ margin: "0 10px 0 0" }}
+          variant="contained"
+          color="secondary"
+          // onClick={() => navigate(`/events/${item.id}`)}
+        >
+          Buy Course{" "}
+        </Button>
         <Button
           variant="contained"
           color="secondary"
-          onClick={() => navigate(`/events/${item.id}`)}>
-          Buy Course{" "}
+          onClick={() => navigate(`/courses/details/${item.id}`)}>
+          More info{" "}
         </Button>
       </Box>
       <CardActions disableSpacing>
