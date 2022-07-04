@@ -8,9 +8,10 @@ const Footer = () => {
       <Container
         maxWidth="xl"
         style={{
-          backgroundColor: "black",
+          backgroundColor: "rgba(243, 239, 254)",
           height: "200px",
-          color: "white",
+          color: "#192136",
+          position: "static",
         }}>
         <Box display="flex">
           <Grid container spacing={2}>
@@ -49,7 +50,9 @@ const Footer = () => {
               <Typography variant="h6">
                 Then subscribe to our channel!
               </Typography>
-              <Button variant="warning" size="md" style={{ marginTop: "10px" }}>
+              <Button
+                size="md"
+                style={{ marginTop: "10px", backgroundColor: "#192136" }}>
                 Subscribe
               </Button>
             </Grid>

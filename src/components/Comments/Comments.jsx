@@ -1,11 +1,52 @@
-import { Container, TextField } from "@mui/material";
-import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  TextField,
+  Typography,
+} from "@mui/material";
+import React, { useContext, useEffect, useState } from "react";
+import { commentsContext } from "../contexts/commentsContext";
+import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
+import { authContext } from "../contexts/authContext";
 
-const Comments = () => {
-  const [backComments, setBackComments] = useState([]);
+const Comments = ({ item }) => {
+  const { getComments, comments, deleteComment } = useContext(commentsContext);
+  const { currentUser } = useContext(authContext);
+  // console.log(getComments);
+  useEffect(() => {
+    getComments();
+  }, []);
   return (
-    <Container>
-      <h1>comments</h1>
+    <Container maxWidth="lg" display="flex">
+      {comments.map(item => (
+        <div>
+          <Typography>{currentUser.email}</Typography>
+          <Box
+            label={currentUser}
+            style={{
+              border: "2px solid",
+              borderRadius: "20px",
+              width: "400px",
+              height: "50px",
+              margin: "5px 0 5px 0",
+              display: " flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}>
+            <Typography
+              key={item.id}
+              item={item}
+              style={{ padding: "5px 0 0 10px" }}>
+              {item.comment}
+            </Typography>
+            <IconButton onClick={() => deleteComment(item.id)}>
+              <DeleteSweepIcon />
+            </IconButton>
+          </Box>
+        </div>
+      ))}
     </Container>
   );
 };

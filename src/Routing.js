@@ -15,21 +15,19 @@ import RegForm from "./components/RegForm/RegForm";
 const Routing = () => {
   return (
     <div>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/register" element={<RegForm />} />
-          <Route path="/add-course" element={<AddCourse />} />
-          <Route path="/list" element={<CourseList />} />
-          <Route path="/courses/edit/:id" element={<EditCourse />} />
-          <Route path="/courses/details/:id" element={<Details />} />
-          <Route path="/favs" element={<Favs />} />
-          <Route path="/comments" element={<Comments />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegForm />} />
+        <Route path="/add-course" element={<AddCourse />} />
+        <Route path="/list" element={<CourseList />} />
+        <Route path="/courses/edit/:id" element={<EditCourse />} />
+        <Route path="/courses/details/:id" element={<Details />} />
+        <Route path="/favs" element={<Favs />} />
+        <Route path="/comments" element={<Comments />} />
+      </Routes>
+      <Footer />
     </div>
   );
 };

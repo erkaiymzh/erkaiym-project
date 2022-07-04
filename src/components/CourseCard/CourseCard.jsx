@@ -29,15 +29,17 @@ export default function CourseCard({ item }) {
   const [checkCourse, setCheckCourse] = React.useState(checkCourseInFav(item));
 
   return (
+    // <div style={{ display: " flex", flexDirection: "column" }}>
     <Card
       style={{
         margin: "35px",
         padding: "10px",
+        borderRadius: "70px",
         border: "1px solid",
         boxShadow: "1px 2px 9px #F4AAB9",
-        width: "350px",
+        width: "450px",
       }}
-      sx={{ maxWidth: 350 }}
+      // sx={{ maxWidth: 350 }}
       display="flex">
       <CardHeader
         style={{ textAlign: "center", height: "50px" }}
@@ -48,10 +50,9 @@ export default function CourseCard({ item }) {
         style={{
           objectFit: "fill",
           boxShadow: "1px 2px 9px #F4AAB9",
-          borderRadius: "10px",
         }}
         component="img"
-        height="200"
+        height="250"
         image={item.image}
         alt="Photo"
       />
@@ -116,5 +117,6 @@ export default function CourseCard({ item }) {
         </IconButton>
       </CardActions>
     </Card>
+    // </div>
   );
 }

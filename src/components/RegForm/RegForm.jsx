@@ -28,8 +28,14 @@ const RegForm = () => {
           flexDirection: "column",
           width: "350px",
           padding: "10px",
+          backgroundColor: "white",
+          borderRadius: "20px",
         }}>
-        <Typography variant="h4">Register Form</Typography>
+        <Typography
+          variant="h4"
+          style={{ color: "black", textAlign: "center" }}>
+          Register Form
+        </Typography>
         {error ? <Alert severity="error">{error}</Alert> : null}
         <TextField
           style={{ margin: "5px" }}
@@ -63,7 +69,10 @@ const RegForm = () => {
           variant="contained">
           Register
         </Button>
-        <Typography marginTop="10px" variant="h5">
+        <Typography
+          marginTop="10px"
+          variant="h6"
+          style={{ color: "black", textAlign: "center" }}>
           Already have an account?
         </Typography>
         <Typography

@@ -23,11 +23,14 @@ const CourseList = () => {
       // price_lte: price[1],
     });
   }, [search, page]);
-
   useEffect(() => {
     getCourses();
   }, [searchParams]);
-  // console.log(courses);
+
+  useEffect(() => {
+    getCourses();
+  }, []);
+  console.log(courses);
 
   return (
     <Container>

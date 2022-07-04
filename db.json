@@ -1,14 +1,6 @@
 {
   "courses": [
     {
-      "name": "art",
-      "description": "sa;dnsdvn",
-      "date": "2022-09-09",
-      "price": 1200,
-      "duration": "20",
-      "id": 3
-    },
-    {
       "name": "ancient history",
       "description": "skdfnlknsafe",
       "image": "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
@@ -48,20 +40,14 @@
   ],
   "comments": [
     {
-      "comment": "lkasnfe",
+      "comment": "What a cool course! in love with it!",
+      "currentUser": "",
       "id": 1
     },
     {
-      "comment": "",
+      "comment": "i loved it so much!!!\n",
+      "currentUser": "",
       "id": 2
-    },
-    {
-      "comment": "sadfe",
-      "id": 3
-    },
-    {
-      "comment": "",
-      "id": 4
     }
   ]
 }

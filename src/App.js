@@ -5,18 +5,22 @@ import Routing from "./Routing";
 import CoursesContextProvider from "./components/contexts/courseContext";
 import FavContextProvider from "./components/contexts/favContext";
 import CommentsContextProvider from "./components/contexts/commentsContext";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <CoursesContextProvider>
-        <CommentsContextProvider>
-          <FavContextProvider>
-            <Routing />
-          </FavContextProvider>
-        </CommentsContextProvider>
-      </CoursesContextProvider>
-    </AuthContextProvider>
+    <BrowserRouter>
+      <AuthContextProvider>
+        <CoursesContextProvider>
+          <CommentsContextProvider>
+            <FavContextProvider>
+              <Routing />
+            </FavContextProvider>
+          </CommentsContextProvider>
+        </CoursesContextProvider>
+      </AuthContextProvider>
+    </BrowserRouter>
   );
 };
 

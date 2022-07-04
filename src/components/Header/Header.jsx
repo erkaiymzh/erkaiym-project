@@ -84,14 +84,6 @@ export default function Header() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}>
       <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit">
-          <AccountCircle />
-        </IconButton>
         <p>Profile</p>
       </MenuItem>
     </Menu>
@@ -99,7 +91,9 @@ export default function Header() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "black" }}>
+      <AppBar
+        position="static"
+        style={{ backgroundColor: "rgba(243, 239, 254)", color: "black" }}>
         <Toolbar>
           <img
             style={{
@@ -120,13 +114,13 @@ export default function Header() {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Link
               to="/list"
-              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              style={{ color: "black", margin: "10px 5px 0 5px" }}>
               Courses
             </Link>
             <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
             <Link
               to="/favs"
-              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              style={{ color: "black", margin: "10px 5px 0 5px" }}>
               Favourites
             </Link>
             <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
@@ -134,18 +128,17 @@ export default function Header() {
             <Link
               to="/login"
               style={{
-                color: "white",
+                color: "black",
                 margin: "10px 5px 0 5px",
-                display: currentUser ? "block" : "none",
+                display: currentUser ? "none" : "block",
               }}>
               {" "}
               Log In
             </Link>
             <IconButton
-              onClick={() => logOut()}
+              onClick={() => (logOut(), navigate("/"))}
               style={{
-                color: "white",
-                display: currentUser ? "none" : "block",
+                display: currentUser ? "block" : "none",
                 height: "20px",
               }}>
               <ExitToAppOutlinedIcon style={{ marginBottom: "10px" }} />

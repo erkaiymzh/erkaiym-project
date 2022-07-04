@@ -63,7 +63,9 @@ export default function Favs() {
                         <DeleteIcon />
                       </IconButton>
                       <IconButton
-                        onClick={() => navigate(`/products/${row.item.id}`)}
+                        onClick={() =>
+                          navigate(`/courses/details/${row.item.id}`)
+                        }
                         aria-label="delete">
                         <InfoIcon />
                       </IconButton>

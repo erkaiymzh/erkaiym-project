@@ -10,7 +10,7 @@ const INIT_STATE = {
 };
 
 function reducer(state = INIT_STATE, action) {
-  console.log(action.payload);
+  // console.log(action.payload);
   switch (action.type) {
     case "GET_COMMENTS":
       return {
@@ -40,10 +40,10 @@ const CommentsContextProvider = ({ children }) => {
   }
   // console.log(state.comments);
 
-  // async function deleteCourse(id) {
-  //   await axios.delete(`${API}/${id}`);
-  //   getCourses();
-  // }
+  async function deleteComment(id) {
+    await axios.delete(`${API2}/${id}`);
+    getComments();
+  }
 
   // async function getOneCourse(id) {
   //   let res = await axios(`${API}/${id}`);
@@ -58,7 +58,13 @@ const CommentsContextProvider = ({ children }) => {
   // }
 
   return (
-    <commentsContext.Provider value={{ createComment, getComments }}>
+    <commentsContext.Provider
+      value={{
+        comments: state.comments,
+        createComment,
+        getComments,
+        deleteComment,
+      }}>
       {children}
     </commentsContext.Provider>
   );

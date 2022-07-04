@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
@@ -10,6 +10,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { courseContext } from "../contexts/courseContext";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -71,6 +72,7 @@ const categories = [
 
 const Filtration = ({ search, setSearch }) => {
   const [category, setCategory] = React.useState("");
+  const { filterByType } = useContext(courseContext);
 
   const handleChange = event => {
     setCategory(event.target.value);
@@ -98,7 +100,7 @@ const Filtration = ({ search, setSearch }) => {
             transition: ".3s linear",
           }}>
           <SearchIconWrapper>
-            <SearchIcon />
+            <SearchIcon style={{ color: "black" }} />
           </SearchIconWrapper>
           <StyledInputBase
             value={search}
@@ -123,7 +125,10 @@ const Filtration = ({ search, setSearch }) => {
           value={category}
           onChange={handleChange}>
           {categories.map(option => (
-            <MenuItem key={option.value} value={option.value}>
+            <MenuItem
+              key={option.value}
+              value={option.value}
+              onClick={() => filterByType("category", option.value)}>
               {option.label}
             </MenuItem>
           ))}
