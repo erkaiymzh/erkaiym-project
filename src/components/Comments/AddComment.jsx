@@ -14,17 +14,23 @@ const AddComment = () => {
     console.log(newComment);
   }
   return (
-    <Container>
+    <Container maxWidth="lg">
       <TextField
+        style={{ width: "500px", border: "2px", margin: "20px 0 20px 0" }}
         id="outlined-multiline-static"
-        label="Multiline"
+        label="Leave your comment"
         multiline
-        rows={4}
+        rows={3}
         defaultValue="Default Value"
         value={comment}
         onChange={e => setComment(e.target.value)}
       />
-      <Button onClick={handleValue}>Add</Button>
+      <Button
+        size="md"
+        style={{ margin: "20px 0 20px 10px" }}
+        onClick={handleValue}>
+        Add Comment
+      </Button>
     </Container>
   );
 };

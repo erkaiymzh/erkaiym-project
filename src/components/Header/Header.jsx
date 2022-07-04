@@ -14,9 +14,14 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ExitToAppOutlinedIcon from "@mui/icons-material/ExitToAppOutlined";
 import { Link, useNavigate } from "react-router-dom";
+import { authContext } from "../contexts/authContext";
 
 export default function Header() {
   const navigate = useNavigate();
+  const { currentUser, logOut } = React.useContext(authContext);
+  React.useEffect(() => {
+    logOut();
+  }, []);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -128,20 +133,35 @@ export default function Header() {
 
             <Link
               to="/login"
-              style={{ color: "white", margin: "10px 5px 0 5px" }}>
+              style={{
+                color: "white",
+                margin: "10px 5px 0 5px",
+                display: currentUser ? "block" : "none",
+              }}>
+              {" "}
               Log In
             </Link>
-            {/* <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit">
-              <AccountCircle />
-              <ExitToAppOutlinedIcon />
-            </IconButton> */}
+            <IconButton
+              onClick={() => logOut()}
+              style={{
+                color: "white",
+                display: currentUser ? "none" : "block",
+                height: "20px",
+              }}>
+              <ExitToAppOutlinedIcon style={{ marginBottom: "10px" }} />
+            </IconButton>
+            {/* {currentUser ? (
+              <IconButton
+                size="large"
+                edge="end"
+                aria-label="account of current user"
+                aria-controls={menuId}
+                aria-haspopup="true"
+                onClick={handleProfileMenuOpen}
+                color="inherit">
+                <AccountCircle />
+              </IconButton>
+            ) : null} */}
           </Box>
           <IconButton
             size="large"

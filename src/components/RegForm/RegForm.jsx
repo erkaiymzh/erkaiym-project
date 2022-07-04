@@ -7,6 +7,7 @@ const RegForm = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
   const { signUp, error } = useContext(authContext);
 
   function handleValues() {
@@ -35,20 +36,31 @@ const RegForm = () => {
           id="filled-basic"
           label="Email"
           variant="outlined"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
         />
         <TextField
           style={{ margin: "5px" }}
           id="filled-basic"
           label="Password"
+          type="password"
           variant="outlined"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
         />
         <TextField
           style={{ margin: "5px" }}
           id="filled-basic"
           label="Password Confirm"
           variant="outlined"
+          type="password"
+          value={passwordConfirm}
+          onChange={e => setPasswordConfirm(e.target.value)}
         />
-        <Button style={{ width: "150px" }} variant="contained">
+        <Button
+          onClick={handleValues}
+          style={{ width: "150px" }}
+          variant="contained">
           Register
         </Button>
         <Typography marginTop="10px" variant="h5">
@@ -58,9 +70,9 @@ const RegForm = () => {
           onClick={() => navigate("/login")}
           variant="p"
           color={"primary"}
-          component="h2"
+          component="h4"
           style={{ cursor: "pointer" }}>
-          Login
+          Login by clicking here
         </Typography>
       </Container>
     </>

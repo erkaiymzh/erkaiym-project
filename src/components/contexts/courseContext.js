@@ -41,7 +41,7 @@ const CoursesContextProvider = ({ children }) => {
       payload: res,
     });
   }
-  console.log(state.courses);
+  // console.log(state.courses);
 
   async function deleteCourse(id) {
     await axios.delete(`${API}/${id}`);

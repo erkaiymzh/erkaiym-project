@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import fire from "../../fire";
 
 export const authContext = React.createContext();
@@ -15,11 +16,11 @@ const AuthContextProvider = ({ children }) => {
       .catch(err => setError(err.message));
   }
 
-  function login(email, password, navi) {
+  function login(email, password, navigate) {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => navi("/products"))
+      .then(() => navigate("/list"))
       .catch(err => setError(err));
   }
 
