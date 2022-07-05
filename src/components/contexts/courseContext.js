@@ -19,7 +19,7 @@ function reducer(state = INIT_STATE, action) {
       return {
         ...state,
         courses: action.payload.data,
-        pages: Math.ceil(action.payload.headers["x-total-count"] / 3),
+        pages: Math.ceil(action.payload.headers["x-total-count"] / 2),
       };
     case "GET_ONE_COURSE":
       return { ...state, oneCourse: action.payload };
@@ -63,12 +63,12 @@ const CoursesContextProvider = ({ children }) => {
     await axios.patch(`${API}/${id}`, editedCourse);
   }
 
-  function filterByType(type, value) {
+  function filterByType(label, value) {
     const search = new URLSearchParams(window.location.search);
     if (value == "all") {
-      search.delete(type);
+      search.delete(label);
     } else {
-      search.set(type, value);
+      search.set(label, value);
     }
 
     const url = `${window.location.pathname}?${search.toString()}`;

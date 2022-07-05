@@ -1,41 +1,84 @@
 {
   "courses": [
     {
-      "name": "ancient history",
-      "description": "skdfnlknsafe",
-      "image": "https://www.pixsy.com/wp-content/uploads/2021/04/ben-sweet-2LowviVHZ-E-unsplash-1.jpeg",
-      "date": "2022-02-20",
-      "price": 10000,
-      "duration": "20",
-      "id": 4
-    },
-    {
-      "name": "mimimimim",
-      "description": ";askdfc asd ",
-      "image": "lsadkNcflaks",
-      "date": "2002-02-02",
-      "price": 2000,
-      "duration": "20",
-      "id": 5
-    },
-    {
-      "name": "lasfm;l",
-      "description": "kekgke",
-      "image": "lamf",
-      "date": "2222-02-20",
-      "price": 3033,
+      "name": "Improve your soft skills",
+      "description": "In the modern world, it is not necessary to memorize information: the necessary facts can be quickly found on the Internet. Therefore, Soft Skills (soft skills) come to the fore, which help to work with this information: evaluate it critically, create creative projects and present them. How to develop soft skills - learn on the course.",
+      "image": "https://media.istockphoto.com/vectors/two-doodle-brains-vector-id1163664246?k=20&m=1163664246&s=612x612&w=0&h=j6kN1WLMUc8jZ_reZqzrCJJzWEBP085BheRahSS5_84=",
+      "date": "2022-06-28",
+      "price": 150,
       "duration": "10",
-      "id": 6
+      "category": "Lecture",
+      "id": 8
     },
     {
-      "name": "",
-      "description": "",
-      "image": "",
-      "date": "",
-      "price": "",
-      "duration": "",
+      "name": "Myths of Ancient World",
+      "description": "Let's try to answer this question in the course. We will learn about the main mysteries of history, get acquainted with real and fictional characters and dispel popular myths. For example: There are many white spots in world history. Indeed, about many important events that unfolded several centuries ago, there was no reliable evidence: chronicles, documents and artifacts. How, then, to compose a complete picture of the past and figure out what really happened, and what is just a myth that excites the imagination?",
+      "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUFBcVERQUGBcVGxwZGRoXGBgaGhwaIBwZIBsfGhgaJCwjGhwoHRocJDclKC0xMjIyICI4PTgyPCwxMi8BCwsLDw4PHRERHTMoIigxMTExMTExMTExMTExMzExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMf/AABEIAL8BCAMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABAUDBgcCAQj/xABGEAACAQIEAgUIBwUGBgMAAAABAhEAAwQSITEFQQYTIlFhFTJScYGRodEHIzRCc7GzFDOywfBicoKTwtJDU1RjkqKDo/H/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAwECBP/EACERAQEAAgICAgMBAAAAAAAAAAABAhEDMRIhQVETMmEi/9oADAMBAAIRAxEAPwDsVKUryOilKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUClKUFX0n+xYr8C9+m1KdJ/sWK/AvfptSqY9C0pSlTClKUClQOJcQWyskFmPmosZm799ABzJ8OZANN0e6Wpibr2LqizfRiAhfMHA5o8DMY1iAY111hturrbaKUr4TRj7SlKBSlKBSlQrfErbqWRwwXuI3iYkwJjcTpzijU2lafZ6f4VoAnMbgQiQRlObthlnMIXYayQI1E7RhMXbuoLlp1ZDswOnjrQss7SKVrPEum2DstlN1XIMN1ZV40Y/dJ1kAQY3naqbH/SBlVblq3be20jKLs3UMdnrFAyoJ7madRIg0Jja3+vlVXA+O2cWheyTAYrDQGkRPZmQNRv3irajOilKUCla/0o442GVBaCPcuNojEzlG5gcuUkgSQOdecB0vwjgC7eS1cgZ0u5reVo1AN0LmE7Eb023xuttipWO1dVxmRlYHYqQR7xWSjClKUClKUClKUFX0n+xYr8C9+m1KdJ/sWK/AvfptSqY9C0pSlTCq3iPExa0Hac7LOw72PId3M+8iNxni2Sbdkg3PvHcWweZGxfuU+s6QDr/iSSTqSTJJ7yTua4zz16ivHx7917vXmdsztmY89tOQA5AT/R1rSOmeFCXLd1ZBfcjTtJGUz6UH/1rc6r+P4PrbDqIzDtL61108SJHtqOOX+tr6Y+iv0gBEWzjs7Rol7QkjkLg8Ns+s/e5sbDjJuYq2wulZIJthfMttHYZTuWBjt77xlBiuVir3gnSJ7MW7gz2hoIjMo8O8eB9/Kq57s9OZhJdth6M/SC9qLWPDMo06zU3Fjk6j95G0jtf3jXTcHird1Q9p1dG2ZSCDyOo5g6RyrhvSS0huC9ZIa3e1kcnHnAjkdjB1kmsfAukOIwjTYfskgtbbVG9Y+6Y0lYO3dXUy9Oc+OXp3+lUHRrpPZxqA2yEuAdq0zDOsbkekuo7Q79YOlX9dPPZpT8euHIttLj23vMyoUIXMVtu5QuQerDKjdoQRuDNc5wvDzhLma9cuoyXbiqosvdDhcmqtlfsNmXRpMaaMc67T9IN5k/ZnDusXYTJo3WFWWWJMZcpIjLzOsGDqdk371uHfq7emW4qmVINtlOWRlAVVAgADWIACjLlpbjx9I2Mw4dxcsC+11bmZrr2r3agAkZSIUBuwF5BB31dcO4hjA9x7r4h1uhOyVgrAOi5iqpvBIEmBNQreDvLm6y5cTrLZgK2od7gJaJGVszge1tedeCjL1ZuXQLltQgJu/VNIuZmuE6+A5zlka1Pyv2t4xk4zYuYh1e9YugJbW2uXqUbMzFS+VbhUt2gRsJ3gCKYK3h8UOoa2bd9WKNZRl7by5AtsAMttWLO51hUQCQFFVVrh4a3kfEW4t3AwuK6NahgM0sSGzAiI085e8xMw+Js4W8mMJW4/XPm6tlZDnV5KgwVKBgYJ3IE6yOscvftzcfXpacP6K3cNjQbFwZLeRWaQjEsbYudWGJ0UXA2uafN1JFdRrkXG8G11f2jDYjEXbr9S7EW0tDtOEtA5MpNwliwiezLSAy5tk+jjH3blt0us11QcyvMhdjlIIDS2bMD2tQ4JUiK7Ryls23gmtd4v0kCObOGAuXRoxPmW/7xG7T90dx5iDL6TYPrcM4GSUi4udc6yhzQVkbxEzoYOsRXO7Fy7btkILagB2CwIlet02kybYOYknXnvXOeVnRx4zLtfIhks7F7jas7RJP8h3AaDlUbiHDrd5ctxQe47Eeptx+XeDUTPdJQFozsysVJ7OVnBjv0XfTnpyEV1v5GPWtmD5NNj2Q0/Hbx8NYau97ehQcQ4XdwjFrTuFOuZCVYD+1lPx222JivdnpPj7PZGJvA6GLkXDBAI/ehjBBq9xfDma46vcY28jMghSwZRb1JYH025Vq7YbtXPN7DW1CkEyGkDtElhoBz591VxyZZL22PCfSVjF/eJZceKsre9Wj/wBat7P0oqVPWYVlaDGRw4nlIIUgT660hcGrMEyQTeNrsOdxEedI5+3wqL1CFVYdYoK59lcBc5Sc0r94RtW+TLx434dl6J9KreMQAlEvic1sE7AmGTMBmEQTExMHvOy1+dBbKEMlwAr2lILowIMSpgag8wdIPdW78C+kO+ALV2ycRcMKhtkK7GRowAIJ31EbCRua6lSy4/p1SlKVqSr6T/YsV+Be/TalOk/2LFfgXv02pVMehaUpSpiG3DrRMlFk+usNzhVgCWUAd+dgPzqxrFfshhBJHcQYI0I09hIrNRu6hHgVj0W/zLn+6vNvg2H3VSYMfvLhgjcedvWfyYkg9rQgxOkgQJB37/XX1uHoSTrrOx5tMnxOundTTd/1X3OimB1LYWzzJJHtNeW6K4Ab4ayNCdRGg3O+2tWDcLtlSsGDqddT6+/217OBXMW1k8527QbT/EoOs92wArTf9Vy9FMDGmFswf7Mj+t6yDotgv+kse22pqbawKqwYFpHefAjXmdzv31Loy2/assdH8JbYNbwuHVhsy2kBHqMSKsmMAmvVfIozbjvS3jd/FOEVD9S6uvVhipYZwHyMMynlB8ZFYWJTFpczHIuQFe2TPVAEBQNSDGm+tbjx82DcVra2yAkEhQNC7ElWIgiWJ001Na8mKt2zmywyg24IGXk2ZvvAADU90c4qeV9vVh+ql4fw0G5ekPAtXQx0AzGIGhMiC0TzWeUCHwxFOFxM7BrGw1E3GBjxirnhGEa5nuuJ60yJ1bLykDYxrvrNeOMvlGVQpYQFykA9Y8hARJggZmBJ3QVm3bClhP2S7btBpe4htl57QL2pIJVeyAoMkDnyqBiMHcW2LPVsWFw3MyglSpRRpOsdif8A8rZTjhbs27b5hmAtLkJBEAZWzDUHLBgAmQQJrLh1cLeFxSqlWVJY9qM8nITpuDI315RWb0xC4D0kOGFm3dtdYlsh5Ux2mUpaOYsqg5JAFwbBIgia6X0eSz1KPh1KqwynMpVgVd8yup81xcZ5HfNcz+jC2Hxbo6hk/Z7gKsAVI6y1oRswOY71160gUBVEACB7PHnVp08/JqVjxw+qefQb+E1zlXBIPIBifb13yNbV0w4m1u01q3Zv3Ll5WUFLbFEBGUszgEA66DU+EVoNrD34GcsNSTK7hmuMZlR2vrGE7f2a45Jt1xeot7Z7SfiP8Tfr4jDJr90qT/l2j+TCoCJdBBzzDZohNe27mdQdny6Rtsa8HCXCHAuMOsUgki2TJS2k6HYLbXx31qfituLHFOQ9ydhbvEexbM/Ga1jFJFy8RstzDT7Qat8aMRcDAKpzI6GIGjxMdx0G5NUd1L83Q2HxJLtbkgGPq9BqLcNpMERy357jjYbiVhkIurO4xrg+wCo2EjqUH/ZtD34xif4a+KcQHznD4qeta75piTtp1XnDTXbTzRNYka4tvq3s3oConmkGFuPckEroZeOfy61WbZblsDf7pPxxJH+k1d9DrA/bbBH3GePaccPyArXDdune3cMkEwIn6x39A6y58PA7Cw4FxZ8Pft3Gs3CqFc0gzE3czaKJMXWIHgBNbJTLqu40qJgMbbv21uWmDI2xHgYIIOoIIgg1Lrt5VX0n+xYr8C9+m1KdJ/sWK/AvfptSqY9MWlKUqYUpSgUpXh3CgliAAJJOwA3JoPdKruD8Vt4q0LtnNkbYspXkCd+4nKfEMOVZjiJZQmQggmS2/cFiZ5yeXjOg0l0rHbDR2ipPgCB6tSZ9fwrJQKi46+6IWt2nusNkRkUk+u4yqB7fYalUo1zbGYTit5w93DKYmB1lsBVMhlQB4nxaTBOu1Y+M8AxroLdvDsQYLk3re2siWfMDGmkiGat/N+8J+qB1MQ4GmkTPPf4V5/arm/U9nmc2o9kdqubjLdqTPKdaaPb4BjIg4W2PDrLeX3cqrl6H4y6yB7KoisXfrLqgMTAyqbedgFVQNhqW75rpRxF3cWpmIGYCOyCZJPfI25UF+9mINoRyOcd20euddNxTxjfPL+NGxXQq+Mj2ktZ0J7JvM4gxJU3LR7U89Dudzp5wnRPFpcutlUo6kLNxGcEjzSxWSkkwAdNO81vhvXTli2BIliWBgwdANJ1jXu7uWP8Aabw1azIAMww1OnmiTynfc91b4xnnl/Gl9COjOLwWIa5dtqyNaZPq3QnMXtkGGI0hTz7q6FbYkaqV8Dl/0k1Gt3ruaGtgCfODDUTGg8Br7KmVrjK232+1ivXMqloJgTAifiQKy0oxDXiVsxDHXQdl9TptpruPfXwcStkE5jAOXZt9TyHcCfzipJtKRBURvED1/nXrIO4e6h6RPKKTBzA9mREkZtpie8TTylbgnMdI+6/PblrpUsqO4V86sRECO6BQ9Iz49ASASxHJQTzUaHY6sPj3V8HEbebLmPL7razyGm/P2+upRQdw130H9cqLaUCAojugUPTBaxiOQFaSRI0I7+8aHQ6b6HuqVXhUA2AHsr3RhSlKCr6T/YsV+Be/TalOk/2LFfgXv02pVMehaUpSphSlKBVR0nxbWsLcdFVjCrDTlh2VCTGsAMTVvWtdL+Ji0i2stwtdIIyiVyo9suGJOkqY7tdYrK3Gbqs6IXsQ2FW0gGW0erD6htFVocbCA+47tiausLw5luZmtsWXUNnXqz3cs4I7sseJ2qr6EcaFxrth1ZLoYvlOoCZbQ1YaSSZ8da3Gkm5uusrZbEIJcXKxGdsvaAcgA6fu1Oh5+cRy13qWjEiSpHgYn4EivdK1yUpSjClKUClKUClKUClKUClfJr7QKUpQKUpQKVXPxa2LptE9pQSx5LopAPic22+3eJy/te5IAUTJLKDoJJjaANZnkdNpGkylY+tUEjMJAkidQO8jlWSgUpSgq+k/2LFfgXv02pTpP9ixX4F79NqVTHoWlKUqYUpSg+CtT6YQXtxqUU6Zc3nPbEx/h/nyrba5newwN647MCbt5yAWYDKVZlAUGCwUc9NGNc53UU4pvLb10PvqvFbyggh7Jnfzla3A137M10quFcXC2MXadAFVGV9NgUvPsDoIyjTbQV3UUw6byz3spSldJFKUoFK13pJxoYV8MXuFLbuwfsgggLoCTqBrOkbTMDK2oXeluKuubmHulbauwFrJZdSgaFkAm6WYakCNmIOwOWyOscbXUK8LcBJAIJXRgCJBIBEjloQa5+v0hdZaGRMt3Mohe2InXQwR3cxqO0pPZ2Lorg1UYi+DJxN+48/2FYqunsJ8Z9QGlxs7bFSlKOSlRsXjLdoKbrqgZgoJ5sdhWv8AEOOG4CtnMtvYvqGcc8nNV/t7ncQIY5cpJutxxuXTWemOIzY1Xw+Ivo9oG3cIBIQnLpbQ5S2ksYJDHJ3abH0B45+04fJdum5ftT1kqQcrM3VkmAD2YGk7a6zVRdx9pPPu218C6j4E1DwnErBuA27ttbiSLbh1DZST2RO6yvmGQQFMaipzk/i94946dOr7VLw/jauAt0qjnYzCPzlCecCcpMjXcCatbN1XUMhBVgCCOYNUl2hZZ2y0pStY1DFWUHFEQ5vrE6zYZSwV1yg+pMxHfB5abLfs2/OuBdNe1qAQDqAdAYnUCd6rukeGZlW5anPZJYRJMQfujVu0FJHMAjXaqzpFxRL+F+ruZDmRoJjMJEKrKYYmQQFaTGmulN6d6uWmxYaxajsBSBIA3AgkGBsNQRp3Vnu3lUqGYAscqzzaCYHjANaZ0HuJbuXLRZlNzL1aEmGyBwzKuuTRQIaCcu0RWxcQtB8RhgZlOsubnUKqrr3jNcQ+sDupvbmzV0tqUpRir6T/AGLFfgXv02pTpP8AYsV+Be/TalUx6FpSlKmFKUoMWIvBEZzsqlj6gCf5Vz1FI6pSyyGaZEliFcaH7p8e6Rzqy6VX7pxSpbyZepIJYtGVy4cQDqTkSNPGRsa5UJYjOAyawFBgtJJltdddjUuW/D0cWOptqPTN0ZkC7jrQw/x9/jJMdxFdswN7rLdt/TRW96g/zrjvSm1lANyWBuHUEq37tPWsaEQFB7I13nYfo+4097Erazv1drCrbCHRfq2QK8ZiA5DkGN9NdAB1x9HLjubdJpSldvOUpVDx3pLawrBH1crnjUBV7UFmAMAlWA05HwkSW9Kz6Q+GftFu0gcKwctqJ0yweY7x/W2v2uGN1XUs6gZQpa2MraAKpJMzOUE+reNBH6TdMVu281plzmAoCv2ADLMSwEnQD3d1TmxVtbYa45RgFDlRmIbfISoaWBJ7PPxmo522vVhNY6rX7/BzhHD27kqyXFGYCc+UnL3HMAeWkGur9HI/ZrYUQFzKB3BXZR+VcmtYtkuOgC9U11SiEw0l1AkasmYdo5hJMmJmuxcPwvV21SZIGpiJYkljHIFiTFd4b+XHLfSXSlK7Qa305wS3cMA09m5bIgwdTlPwY1ol3AdnR3JzgTMEglBusH7x13reunWKFvDKxIA620DPdm1+FaPex1sLoSQHnzT5ojw3ldt9qnnvb0cX6sDcOX6vz9TcBJdztbZgdTuCu9QMPw9WZFae0bE8x23u5tGkbLtEeGtW4x9vSS0BrmoVjujAHTlBHxqtw+OAuW4S4Y6kEhT/AMN7uY+5hvrXPtRWeTyba5XIDqgZRsWa3ccyBof3Y3neu8YLDLatpbScqKqiSSYAAEk6k6bmuHjFBLaI8qRkJzAjUWbq/wATgV3WzcDKrDZgCPURNUxR5fhkpSldIlad0jwy2roZBHXK0rrlzqQcwGwJDkt35Z3rca0vpHfLYmB/wVygd5fI7H1wEEf7ornP9XfH+yDwotYui4yJlzqrXB3sDmB00AtjMANoXUlq2+0+fFvG1u0gB7zcZyR7BbQ/4q1bgF1nvPh7w+ruL1gg/wDEGWCkidAh337Om4Fv0RR1OKFwaJeyI2wKJbRVAHcI+JG4NMOm8nbZaUpXSar6T/YsV+Be/TalOk/2LFfgXv02pVMehaUpSphSlKDSeKNmxVwk8yq/3QtoH3Pm99RLfnP5m4287zR5/jrp4RWR+1cd+TFivqZ2b8stYsP51zsZe3vM5+wna8PRj+z415sru168ZqRQ9MlmzPo3l9xtn+cVi+jC9lx4Hp2rifFH/wBFTelazhrh7nQ/wj+da70NxAt4/DMf+YE/zA1sfx1Xj6M56rvVKUqjyFaJ9JWE639nQDzngkDULKZj7FJNb3Wm9P8AGdT1N3Lmy59OcFrSmPGGNc5dO+P9o1u1w7D2ygtWz1jnssxYkadpyZ0gchGsDSZqbcyEBAzEqQZBIImQCSsASCdNBroKw4LHWrhQ23GXIVk9kzK5QZ1zQrfGK+vxG1nW1buIWLQQuuw2kaCAo37oqHt6mj4Hsiz/AG7yt7EKhSPa7j2V+hhX52TS5aX0OrHjJIdgfEM7D2V+iRXoxQ5fgpSlaioOl2FS5ath1Bi4CN98r93hNawOHWv+WnuraulLwlrxuR/9Vw/yrX6jyX29PD+rCmFtja2g/wAK/nWj9LPtTeCp/CK36tA6V/arnqT+Ba54+1FS+IYKQDAjZQF9+UCfbX6IwNpUtW0QQqoqqO4BQAPdX50bY1+ieFXM1i03pW0PvUVeIcvwl0pStRK1XCYRMRiLhdQyIxchhIckstvfcALPsXxrZMVdCIzkgZQTJ9VVfRvDFLZYmcxgf3V0E95JzH2iub7sdY3UtVvB7KJizbMzaVwhO0RbK6nzm6t/g/dpdcCSLII++925/mXXf3dqqrjg6m+l7YMQZPJwMpHttz/4tV7w2zks209C2i+5QP5VuPr03K79pVKUrXCr6T/YsV+Be/TalOk/2LFfgXv02pVMehaUpSphWDF4gW7b3GMKis5J7lBJ+ArIxHM76bxUDE8PsurLcZypHaBvXcuU94zxBo1puCnY7qEQ+sKGP8dV3R7GXLhv9Y5bJcIWY0GumnqrfB0cwwkhXEmT9de1MASe33AD2CsNrorg7WYojJmMsRevCT49vfWpfjX/ACxpXGlz4fEjuM/+K22/lWhWL5tutxd7bK49akEfEV29+imDfMCtwzOdRicQAZEHMouQdBGvdUdugXDQJNgwP+9f/wB9dY4aPyxs1pwyhlMhgCD4HUVkqtwfCLVsBbRugKAAOvvMABoAAXMAd1WAEf1PxNdoPVaH04DXLmS6g6m2oObMyiWIYi40AKPqxEMJ750G8C4uozDTfUaf1Ir3PjWWbMb43bkOLwiMnUm06qWBy2wqsCJABzTl7RMkyd+ZqHg+j96zkxZUHDjMc+YSFKsAx0ErqO0oIO40rrtzDWHIzJaY584lUJ6xY7Qn74yjXcZR3VmxWHt3EKXUR0MSrgMp7pB03rPBX8t+nCuBcHv4y9NpJh81xzpbTXMZbv8AASfDnXfRUTC27VtVt2hbRR5qJlA79FHvqTmHeK2OMsvJ6pSo9zITDNB7g5XvjQEdx91a5a50vuXS1pLQSFJuMXLdzIAAo8WMk91U69bz6v2F/lW53+FWnbM4cmI1uXPyzRzrEOC4ciQpg7EXLn+6p54W3auHJMZpqLdby6r2560XpEG/aX66AxC/u5IjKI86DyrsrcCww3DD/wCa6P8AX3VDv9EcBcbM9rMxkSbt0ns6H7/KmPHZW/ljiThfulvaAPyJruHQbiHX4KyxUKUHVkAyOx2QfaAD7axHoNw7/px/mXf99WOA4HYsJksB0UEtlW7diTvoWqkjnPOZRa0r4K8u4ESQJMCTue4eNE3OuliXbb3bpuXCVJNtbgzW4YjRDprvEEke2s3QThuO67r8UClrIwVGMMSxUg5BqIg+fB121rfw4OxGm+vqP5Ee+vU1kxm9u7nfHTnPHuOPct5sQrW0XtQqq69pSkFg2YmHIkhRrtVh0H6RXcXduq5Y27SLBIGrE7lgBqQJip3EujGHvKbQvOiuRKKyN5rgkLnBYarG5A10q74dgrWHRbVhVRQNFG52BJJ1YzEk60ku91uWWPjqROpSlakq+k/2LFfgXv02pTpP9ixX4F79NqVTHoWlKUqYx3LYYQZ0M6GKhrwu2AwgnMc2507gCOVWFKEtiC3DbZzdnzt9TB5xG0Tyr0OH2+z2fNJYancxJPfsN6mUo3dQ34dbMyszJOp1J3Pr8a+eTLWvZ33OZp981MpQ3ftHsYREMosGMu520+VSaUoy3aJewKMczLJmdyO7kN/NHuFfF4fbEnLqZmSTvvHd7KmUo3dQzw+2VC5eyBESYjMG576ge6nk9Neydcs6n7s5efKamUobqE/D0IiDoIGp00A98KNfDvr4eG25nLGkGCRO0e3Sp1KG6w2LKooVRAHiTuZOp8TXjEYNHMuJMRuRp7Kk0ozdQl4bbGynSfvNziefh+dfF4XaAIyaHcSdfX3nxqbSjfK/aKeH298v3cu583KVj1QTXjybbktl1PifXoNgJ5VOpQ3ULyZa9Dv5mdd9Z5/zPea+eTLeoy6EQdTBEzqPXrU2lDyv2KI07qxXrIcQ0+wkbgg7coNZqUEHybbmcup31P5f1zFel4egmAde9mPNTzPeoPv7zUylDdQ/J9vbLsCNzsSTHvM+6vPku1p2JjaSSPcd9qm0oeV+3i2gUBRsAAJM6DxO9ZKUoKvpP9ixX4F79NqU6T/YsV+Be/TalUx6YtKVE8oW/S+DfKnlC36Xwb5VMS6VE8oW/S+DfKnlC36Xwb5UEulRPKFv0vg3yp5Qt+l8G+VBLpUTyhb9L4N8qeULfpfBvlQS6VE8oW/S+DfKnlC36Xwb5UEulRPKFv0vg3yp5Qt+l8G+VBLpUTyhb9L4N8qeULfpfBvlQS6VE8oW/S+DfKnlC36Xwb5UEulRPKFv0vg3yp5Qt+l8G+VBLpUTyhb9L4N8qeULfpfBvlQS6VE8oW/S+DfKnlC36Xwb5UEulRPKFv0vg3yp5Qt+l8G+VBLpUTyhb9L4N8qeULfpfBvlQS6VE8oW/S+DfKnlC36Xwb5UEulRPKFv0vg3yp5Qt+l8G+VBLpUTyhb9L4N8qeULfpfBvlQRuk/2LFfgXv02pUbpJj7ZweJAbU2LvJv+W3hSqY9D/9k=",
+      "date": "2022-07-01",
+      "price": 200,
+      "duration": "3",
+      "category": "History",
+      "id": 9
+    },
+    {
+      "name": "How to find yourself",
+      "description": "Every year we face change: mastering new technologies, experiencing political and economic crises, coping with personal challenges. We often feel lost in new circumstances. We spend energy to cope with experiences, but this only increases anxiety. How to be?",
+      "image": "https://static.tildacdn.com/tild3964-6366-4435-b635-353931306134/___-_2020-12-28T1321.png",
+      "date": "2022-07-30",
+      "price": 1000,
+      "duration": "30",
+      "category": "Lecture",
+      "id": 10
+    },
+    {
+      "name": "For wine lovers",
+      "description": "“The color is pure ruby! Freshness, green pepper and spices in the aftertaste,” with a glass of wine in hand, I want to describe the drink beautifully and accurately, because you can tell as much about good wine as about books or music. But in reality, even reading the name on a wine list can be difficult.",
+      "image": "https://pyxis.nymag.com/v1/imgs/f37/8ec/9c86aa7a1248f1fab76fb3fdee9935440e-wine-glasses.2x.rsocial.w600.jpg",
+      "date": "2022-07-15",
+      "price": 60,
+      "duration": "4",
+      "category": "Lecture",
+      "id": 11
+    },
+    {
+      "name": "The history of USSR",
+      "description": "There are many disputes around the history of the USSR: this is our recent past, and it is still not clear how to relate to it. Professionals and amateurs discuss the role of the revolution, the personality of Stalin and perestroika.",
+      "image": "https://ak.picdn.net/shutterstock/videos/1065008845/thumb/1.jpg",
+      "date": "2022-09-30",
+      "price": 100,
+      "duration": "7",
+      "category": "History",
+      "id": 12
+    },
+    {
+      "name": "The history of art",
+      "description": "The history of art can be explored endlessly, but where do you start? We invite you to take the first step in the conscious study of European culture. In 9 lessons, we will analyze the art of two and a half millennia, from Antiquity to the 20th century. We will understand the features of each period and sort through the styles, eras and terms.",
+      "image": "https://static.tildacdn.com/tild6236-6230-4538-a439-363664353464/_2__png.png",
+      "date": "2022-07-15",
+      "price": 100,
+      "duration": "5",
+      "category": "Art",
+      "id": 13
+    },
+    {
+      "name": "Start analyzing films correctly",
+      "description": "The course is aimed at a wide range of students. If you want to watch movies deeper, understand the intricacies of cinematic language and easily read hidden directorial ideas, this course is for you! It will give you a comprehensive look at the film process as a whole and, perhaps, push you to take your first steps in the fascinating world of cinema.",
+      "image": "https://www.creativefabrica.com/wp-content/uploads/2021/03/18/cinema-logo-design-template-premium-Graphics-9724899-1.jpg",
+      "date": "2022-08-03",
+      "price": 200,
+      "duration": "10",
       "category": "Cinema",
-      "id": 7
+      "id": 14
+    },
+    {
+      "name": "Discover Charlie Chaplin's life",
+      "description": "Modern films are not always easy to understand from the first viewing. It's hard to see all the references in Tarantino films right off the bat. Understanding why another Oscar winner is so good is even more difficult. And that's okay. Cinema has come a long way from a \"moving picture\" to a complex art form with a unique language. Let's do it on the course.",
+      "image": "https://dedocupdate.files.wordpress.com/2021/12/the-real-charlie-chaplin-trailer.jpg",
+      "date": "2022-09-09",
+      "price": 300,
+      "duration": "7",
+      "category": "Cinema",
+      "id": 15
     }
   ],
   "comments": [
@@ -48,6 +91,16 @@
       "comment": "i loved it so much!!!\n",
       "currentUser": "",
       "id": 2
+    },
+    {
+      "comment": "Iliked this course a lot!",
+      "currentUser": "",
+      "id": 3
+    },
+    {
+      "comment": "adorable!!!!!",
+      "currentUser": "",
+      "id": 4
     }
   ]
 }

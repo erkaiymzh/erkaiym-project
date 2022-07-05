@@ -1,0 +1,22 @@
+.nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  /* color: black; */
+  border: none;
+  outline: none;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and(max-width: 1024px) {
+  .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+  .responsive_nav {
+    transform: none;
+  }
+}

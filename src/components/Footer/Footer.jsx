@@ -1,7 +1,7 @@
 import { Container, Typography, Box, Grid } from "@mui/material";
 import React from "react";
 import { Button } from "react-bootstrap";
-
+import "../Home/Home.css";
 const Footer = () => {
   return (
     <div>
@@ -23,9 +23,15 @@ const Footer = () => {
                 marginTop: "20px",
                 marginLeft: "40px",
               }}>
-              <Typography variant="h6">Courses</Typography>
-              <Typography variant="h6">Favourites</Typography>
-              <Typography variant="h6">About Us</Typography>
+              <Typography variant="h6" className="cards-name">
+                Courses
+              </Typography>
+              <Typography variant="h6" className="cards-name">
+                Favourites
+              </Typography>
+              <Typography variant="h6" className="cards-name">
+                About Us
+              </Typography>
               <img
                 style={{
                   borderRadius: "50px",
@@ -46,10 +52,10 @@ const Footer = () => {
                 marginTop: "20px",
                 marginLeft: "40px",
               }}>
-              <Typography variant="h6">Want to stay tuned?</Typography>
-              <Typography variant="h6">
-                Then subscribe to our channel!
+              <Typography variant="h6" className="cards-name">
+                Stay tuned with us!
               </Typography>
+
               <Button
                 size="md"
                 style={{ marginTop: "10px", backgroundColor: "#192136" }}>

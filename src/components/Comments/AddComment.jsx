@@ -14,6 +14,7 @@ const AddComment = () => {
       comment,
       currentUser,
     };
+    setComment("");
     createComment(newComment);
     console.log(newComment);
   }

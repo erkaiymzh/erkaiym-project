@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { courseContext } from "../contexts/courseContext";
 import { favContext } from "../contexts/favContext";
 import { red } from "@mui/material/colors";
+import { authContext } from "../contexts/authContext";
 
 const color = red[500];
 
@@ -26,6 +27,7 @@ export default function CourseCard({ item }) {
   const navigate = useNavigate();
   const { deleteCourse } = React.useContext(courseContext);
   const { addCourseToFav, checkCourseInFav } = React.useContext(favContext);
+  const { isAdmin } = React.useContext(authContext);
   const [checkCourse, setCheckCourse] = React.useState(checkCourseInFav(item));
 
   return (
@@ -37,15 +39,23 @@ export default function CourseCard({ item }) {
         borderRadius: "70px",
         border: "1px solid",
         boxShadow: "1px 2px 9px #F4AAB9",
-        width: "450px",
+        width: "400px",
       }}
       // sx={{ maxWidth: 350 }}
       display="flex">
       <CardHeader
+        className="category"
+        style={{
+          textAlign: "center",
+          fontWeight: "bold",
+          fontFamily: "Merriweather",
+        }}
+        title={item.category}
+      />
+      <CardHeader
         style={{ textAlign: "center", height: "50px" }}
         title={item.name}
       />
-      <CardHeader style={{ textAlign: "center" }} title={item.category} />
       <CardMedia
         style={{
           objectFit: "fill",
@@ -53,6 +63,7 @@ export default function CourseCard({ item }) {
         }}
         component="img"
         height="250"
+        width="259"
         image={item.image}
         alt="Photo"
       />
@@ -86,33 +97,37 @@ export default function CourseCard({ item }) {
         <Button
           style={{ margin: "0 10px 0 0" }}
           variant="contained"
-          color="secondary"
+          color="primary"
           // onClick={() => navigate(`/events/${item.id}`)}
         >
           Buy Course{" "}
         </Button>
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           onClick={() => navigate(`/courses/details/${item.id}`)}>
           More info{" "}
         </Button>
       </Box>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing style={{ justifyContent: "center" }}>
         <IconButton
           aria-label="add to favorites"
           onClick={() => {
             addCourseToFav(item);
             setCheckCourse(checkCourseInFav(item));
           }}>
-          <FavoriteIcon color={checkCourse ? "secondary" : "disabled"} />
-          Add to favs
+          <FavoriteIcon color={checkCourse ? "primary" : "disabled"} />{" "}
+          {checkCourse ? "Added" : "Add to favs"}
         </IconButton>
 
-        <IconButton onClick={() => navigate(`/courses/edit/${item.id}`)}>
+        <IconButton
+          style={{ display: isAdmin ? "block" : "none" }}
+          onClick={() => navigate(`/courses/edit/${item.id}`)}>
           <EditIcon />
         </IconButton>
-        <IconButton onClick={() => deleteCourse(item.id)}>
+        <IconButton
+          style={{ display: isAdmin ? "block" : "none" }}
+          onClick={() => deleteCourse(item.id)}>
           <DeleteSweepIcon />
         </IconButton>
       </CardActions>

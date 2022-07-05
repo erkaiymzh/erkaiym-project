@@ -83,8 +83,13 @@ export default function Header() {
       }}
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}>
-      <MenuItem onClick={handleProfileMenuOpen}>
+      <MenuItem
+        onClick={handleProfileMenuOpen}
+        style={{ display: "flex", flexDirection: "column" }}>
         <p>Profile</p>
+        <p onClick={() => navigate("/list")}>Courses</p>
+        <p onClick={() => navigate("/favs")}>Favourites</p>
+        <p onClick={() => navigate("/login")}>Login</p>
       </MenuItem>
     </Menu>
   );
@@ -156,15 +161,7 @@ export default function Header() {
               </IconButton>
             ) : null} */}
           </Box>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            style={{ marginLeft: "10px", marginTop: "10px" }}
-            aria-label="open drawer"
-            sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
+
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -172,7 +169,7 @@ export default function Header() {
               aria-controls={mobileMenuId}
               aria-haspopup="true"
               onClick={handleMobileMenuOpen}
-              style={{ color: "white" }}>
+              style={{ color: "black" }}>
               <MoreIcon />
             </IconButton>
           </Box>

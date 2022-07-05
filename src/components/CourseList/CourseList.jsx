@@ -27,9 +27,9 @@ const CourseList = () => {
     getCourses();
   }, [searchParams]);
 
-  useEffect(() => {
-    getCourses();
-  }, []);
+  // useEffect(() => {
+  //   getCourses();
+  // }, []);
   console.log(courses);
 
   return (
@@ -42,11 +42,15 @@ const CourseList = () => {
       </Box>
       <Box display={"flex"} justifyContent={"center"}>
         <Pagination
-          style={{ marginBottom: "20px" }}
+          style={{
+            marginBottom: "20px",
+            backgroundColor: " white",
+            borderRadius: "10px",
+            padding: "10px",
+          }}
           page={page}
+          color="primary"
           count={isNaN(pages) ? 0 : pages}
-          variant="outlined"
-          color="secondary"
           onChange={(e, value) => setPage(value)}
         />
       </Box>

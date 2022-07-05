@@ -64,7 +64,9 @@ const AddCourse = () => {
   }
 
   return (
-    <Container maxwidth="xl">
+    <Container
+      maxwidth="lg"
+      style={{ backgroundColor: "white", borderRadius: "10px" }}>
       <Box
         style={{
           display: "flex",
@@ -72,7 +74,9 @@ const AddCourse = () => {
           margin: "40px 0 40px 0",
           padding: "10px",
         }}>
-        <Typography variant="h4">Add a new course, please</Typography>
+        <Typography variant="h4" color="primary">
+          Add a new course, please
+        </Typography>
         <TextField
           id="outlined-basic"
           label="Name of a course"
@@ -144,9 +148,11 @@ const AddCourse = () => {
             label="Amount"
           />
         </FormControl>
+
         <Button
           variant="contained"
           color="success"
+          style={{ width: "200px" }}
           onClick={() => handleValues()}>
           Add course
         </Button>

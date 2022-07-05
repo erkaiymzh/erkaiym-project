@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { courseContext } from "../contexts/courseContext";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import AddComment from "../Comments/AddComment";
 import { Box, Button, Container, Typography } from "@mui/material";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
@@ -9,10 +9,13 @@ import TimerIcon from "@mui/icons-material/Timer";
 
 import Comments from "../Comments/Comments";
 import { commentsContext } from "../contexts/commentsContext";
+import { useCart } from "react-use-cart";
 
 const Details = ({ item }) => {
   const { getOneCourse, oneCourse } = useContext(courseContext);
   const { getComments, comments } = useContext(commentsContext);
+  const navigate = useNavigate();
+  const { addItem } = useCart();
 
   useEffect(() => {
     getComments();
@@ -31,8 +34,8 @@ const Details = ({ item }) => {
         variant="h4">
         {oneCourse.name}
       </Typography>
-      <Box style={{ display: "flex" }}>
-        <img component="img" width="50%" src={oneCourse.image} alt="Фото" />
+      <Box style={{ display: "flex", paddingLeft: "30px" }}>
+        <img component="img" width="30%" src={oneCourse.image} alt="Фото" />
         <Box style={{ marginLeft: "15px" }}>
           <div>
             <CalendarMonthIcon /> {oneCourse.date}
@@ -58,13 +61,16 @@ const Details = ({ item }) => {
             <Button
               style={{ marginTop: "15px" }}
               variant="contained"
-              color="success">
+              color="success"
+              onClick={(() => addItem(oneCourse), navigate("/cart"))}>
               Add to Cart
             </Button>
           </Box>
         </Box>
       </Box>
-      <div style={{ padding: "20px" }}>{oneCourse.description}</div>
+      <Container maxWidth="lg" style={{ padding: "20px" }}>
+        {oneCourse.description}
+      </Container>
       <AddComment />
       <Comments />
     </div>

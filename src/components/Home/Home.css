@@ -6,6 +6,7 @@
 .container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 }
@@ -13,7 +14,7 @@
 .txt {
   position: relative;
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: calc(20px + 5vw);
+  font-size: 40px;
   font-weight: 700;
   color: #fff;
   letter-spacing: 0.02em;
@@ -64,5 +65,49 @@
   100% {
     filter: blur(0.007em);
     transform: translate(0) rotate(-0.5deg);
+  }
+}
+
+@media all and (max-width: 830px) {
+  .container h3 {
+    font-size: 30px;
+  }
+  .container h4 {
+    font-size: 25px;
+  }
+  .txt {
+    font-size: 30px !important;
+  }
+  .we-have-lots {
+    height: 300px !important;
+    transition: 0.7s;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .people-count {
+    height: 200px !important;
+    transition: 0.9s;
+  }
+  .people-count h1 {
+    font-size: 50px;
+  }
+  .txt {
+    font-size: 19px !important;
+  }
+  .container {
+    height: 200px !important;
+    transition: 0.7s;
+  }
+  .css-ag7rrr-MuiTypography-root {
+    line-height: 0.9 !important;
+  }
+  .cards-name {
+    font-size: 20px !important;
+  }
+}
+@media all and (max-width: 375px) {
+  .txt {
+    font-size: 15px !important;
   }
 }

@@ -53,6 +53,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 const categories = [
   {
+    label: "All",
+    value: "All",
+  },
+  {
     label: "Art",
     value: "Art",
   },
@@ -98,6 +102,7 @@ const Filtration = ({ search, setSearch }) => {
             outline: "none",
             position: "relative",
             transition: ".3s linear",
+            backgroundColor: "white",
           }}>
           <SearchIconWrapper>
             <SearchIcon style={{ color: "black" }} />
@@ -118,7 +123,11 @@ const Filtration = ({ search, setSearch }) => {
           alignItems: "center",
         }}>
         <TextField
-          style={{ width: "200px", marginRight: "10px" }}
+          style={{
+            width: "200px",
+            marginRight: "10px",
+            backgroundColor: "white",
+          }}
           id="outlined-select-currency"
           select
           label="Select category"

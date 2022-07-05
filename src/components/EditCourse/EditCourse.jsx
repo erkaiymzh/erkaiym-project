@@ -54,7 +54,9 @@ const EditCourse = () => {
   }
 
   return (
-    <Container maxwidth="xl">
+    <Container
+      maxwidth="lg"
+      style={{ backgroundColor: "white", borderRadius: "10px" }}>
       <Box
         style={{
           display: "flex",
@@ -62,7 +64,9 @@ const EditCourse = () => {
           margin: "40px 0 40px 0",
           padding: "10px",
         }}>
-        <Typography variant="h4">Edit course, please</Typography>
+        <Typography variant="h4" color="primary">
+          Edit course, please
+        </Typography>
         <TextField
           id="outlined-basic"
           label="Name of a course"
@@ -121,7 +125,11 @@ const EditCourse = () => {
             label="Amount"
           />
         </FormControl>
-        <Button variant="contained" color="success" onClick={handleValues}>
+        <Button
+          style={{ width: "200px" }}
+          variant="contained"
+          color="success"
+          onClick={handleValues}>
           Save changes{" "}
         </Button>
       </Box>
