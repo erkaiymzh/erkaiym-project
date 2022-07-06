@@ -10,12 +10,13 @@ import TimerIcon from "@mui/icons-material/Timer";
 import Comments from "../Comments/Comments";
 import { commentsContext } from "../contexts/commentsContext";
 import { useCart } from "react-use-cart";
+import { cartContext } from "../contexts/cartContext";
 
 const Details = ({ item }) => {
   const { getOneCourse, oneCourse } = useContext(courseContext);
   const { getComments, comments } = useContext(commentsContext);
+  const { addProductToCart } = useContext(cartContext);
   const navigate = useNavigate();
-  const { addItem } = useCart();
 
   useEffect(() => {
     getComments();
@@ -62,7 +63,10 @@ const Details = ({ item }) => {
               style={{ marginTop: "15px" }}
               variant="contained"
               color="success"
-              onClick={(() => addItem(oneCourse), navigate("/cart"))}>
+              onClick={() => {
+                addProductToCart();
+                navigate("/cart");
+              }}>
               Add to Cart
             </Button>
           </Box>

@@ -13,15 +13,15 @@ const App = () => {
   return (
     <BrowserRouter>
       <AuthContextProvider>
-        <CartContextProvider>
-          <CoursesContextProvider>
-            <CommentsContextProvider>
-              <FavContextProvider>
+        <CoursesContextProvider>
+          <CommentsContextProvider>
+            <FavContextProvider>
+              <CartContextProvider>
                 <Routing />
-              </FavContextProvider>
-            </CommentsContextProvider>
-          </CoursesContextProvider>
-        </CartContextProvider>
+              </CartContextProvider>
+            </FavContextProvider>
+          </CommentsContextProvider>
+        </CoursesContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   );

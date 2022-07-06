@@ -27,9 +27,9 @@ const CourseList = () => {
     getCourses();
   }, [searchParams]);
 
-  // useEffect(() => {
-  //   getCourses();
-  // }, []);
+  useEffect(() => {
+    getCourses();
+  }, []);
   console.log(courses);
 
   return (

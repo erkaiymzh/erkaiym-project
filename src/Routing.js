@@ -36,7 +36,7 @@ const Routing = () => {
         <Route path="/comments" element={<Comments />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/formpay" element={<FormPay />} />
+        {/* <Route path="/formpay" element={<FormPay />} /> */}
       </Routes>
       <Footer />
     </div>

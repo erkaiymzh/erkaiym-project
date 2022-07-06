@@ -21,7 +21,7 @@ const Comments = ({ item }) => {
   return (
     <Container maxWidth="lg" display="flex">
       {comments.map(item => (
-        <div>
+        <div key={item.id}>
           <Typography>{currentUser.email}</Typography>
           <Box
             label={currentUser}
