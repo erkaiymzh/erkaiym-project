@@ -15,20 +15,30 @@ import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
 import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
 import { Button } from "@mui/material";
 import { Box } from "@mui/system";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+
 import { useNavigate } from "react-router-dom";
 import { courseContext } from "../contexts/courseContext";
 import { favContext } from "../contexts/favContext";
 import { red } from "@mui/material/colors";
+
 import { authContext } from "../contexts/authContext";
+import { useCart } from "react-use-cart";
+import { cartContext } from "../contexts/cartContext";
 
 const color = red[500];
 
 export default function CourseCard({ item }) {
   const navigate = useNavigate();
-  const { deleteCourse } = React.useContext(courseContext);
+  const { deleteCourse, oneCourse } = React.useContext(courseContext);
   const { addCourseToFav, checkCourseInFav } = React.useContext(favContext);
   const { isAdmin } = React.useContext(authContext);
   const [checkCourse, setCheckCourse] = React.useState(checkCourseInFav(item));
+  const { addProductToCart, checkProductInCart } =
+    React.useContext(cartContext);
+  const [checkProduct, setCheckProduct] = React.useState(
+    checkProductInCart(item)
+  );
 
   return (
     // <div style={{ display: " flex", flexDirection: "column" }}>
@@ -95,12 +105,15 @@ export default function CourseCard({ item }) {
           margin: "0 5px 0 5px",
         }}>
         <Button
-          style={{ margin: "0 10px 0 0" }}
-          variant="contained"
-          color="primary"
-          // onClick={() => navigate(`/events/${item.id}`)}
-        >
-          Buy Course{" "}
+          onClick={() => {
+            addProductToCart(item);
+            setCheckProduct(checkProductInCart(item));
+          }}
+          size="small">
+          <AddShoppingCartIcon
+            color={checkProduct ? "secondary" : "primary"}
+            // style={{ color: checkProduct ? "red" : "blue" }} // использовали условный рендеринг
+          />
         </Button>
         <Button
           variant="contained"

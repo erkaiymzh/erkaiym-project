@@ -61,10 +61,7 @@ export default function Header() {
         horizontal: "right",
       }}
       open={isMenuOpen}
-      onClose={handleMenuClose}>
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
+      onClose={handleMenuClose}></Menu>
   );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -86,9 +83,10 @@ export default function Header() {
       <MenuItem
         onClick={handleProfileMenuOpen}
         style={{ display: "flex", flexDirection: "column" }}>
-        <p>Profile</p>
         <p onClick={() => navigate("/list")}>Courses</p>
         <p onClick={() => navigate("/favs")}>Favourites</p>
+        <p onClick={() => navigate("/cart")}>Cart</p>
+
         <p onClick={() => navigate("/login")}>Login</p>
       </MenuItem>
     </Menu>
@@ -127,6 +125,12 @@ export default function Header() {
               to="/favs"
               style={{ color: "black", margin: "10px 5px 0 5px" }}>
               Favourites
+            </Link>
+            <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
+            <Link
+              to="/cart"
+              style={{ color: "black", margin: "10px 5px 0 5px" }}>
+              Cart
             </Link>
             <Typography style={{ margin: "10px 5px 0 5px" }}>|</Typography>
 

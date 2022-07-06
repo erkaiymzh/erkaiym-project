@@ -9,6 +9,7 @@ import Details from "./components/Details/Details";
 import EditCourse from "./components/EditCourse/EditCourse";
 import Favs from "./components/Favs/Favs";
 import Footer from "./components/Footer/Footer";
+import FormPay from "./components/FormPay/FormPay";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import LoginForm from "./components/LoginForm/LoginForm";
@@ -35,6 +36,7 @@ const Routing = () => {
         <Route path="/comments" element={<Comments />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/formpay" element={<FormPay />} />
       </Routes>
       <Footer />
     </div>

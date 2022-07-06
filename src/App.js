@@ -7,18 +7,21 @@ import FavContextProvider from "./components/contexts/favContext";
 import CommentsContextProvider from "./components/contexts/commentsContext";
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
+import CartContextProvider from "./components/contexts/cartContext";
 
 const App = () => {
   return (
     <BrowserRouter>
       <AuthContextProvider>
-        <CoursesContextProvider>
-          <CommentsContextProvider>
-            <FavContextProvider>
-              <Routing />
-            </FavContextProvider>
-          </CommentsContextProvider>
-        </CoursesContextProvider>
+        <CartContextProvider>
+          <CoursesContextProvider>
+            <CommentsContextProvider>
+              <FavContextProvider>
+                <Routing />
+              </FavContextProvider>
+            </CommentsContextProvider>
+          </CoursesContextProvider>
+        </CartContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   );
