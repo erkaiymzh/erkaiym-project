@@ -25,10 +25,7 @@ const Routing = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegForm />} />
-        <Route
-          path="/add-course"
-          element={isAdmin ? <AddCourse /> : <Navigate replace to="/*" />}
-        />
+        <Route path="/add-course" element={<AddCourse />} />
         <Route path="/list" element={<CourseList />} />
         <Route path="/courses/edit/:id" element={<EditCourse />} />
         <Route path="/courses/details/:id" element={<Details />} />

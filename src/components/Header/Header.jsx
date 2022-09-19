@@ -18,7 +18,7 @@ import { authContext } from "../contexts/authContext";
 
 export default function Header() {
   const navigate = useNavigate();
-  const { currentUser, logOut } = React.useContext(authContext);
+  const { currentUser, logOut, isAdmin } = React.useContext(authContext);
   React.useEffect(() => {
     logOut();
   }, []);
@@ -95,8 +95,12 @@ export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar
-        position="static"
-        style={{ backgroundColor: "rgba(243, 239, 254)", color: "black" }}>
+        position="sticky"
+        top="0"
+        style={{
+          backgroundColor: "rgba(243, 239, 254)",
+          color: "black",
+        }}>
         <Toolbar>
           <img
             style={{
@@ -147,7 +151,7 @@ export default function Header() {
             <IconButton
               onClick={() => (logOut(), navigate("/"))}
               style={{
-                display: currentUser ? "block" : "none",
+                display: currentUser || isAdmin ? "block" : "none",
                 height: "20px",
               }}>
               <ExitToAppOutlinedIcon style={{ marginBottom: "10px" }} />

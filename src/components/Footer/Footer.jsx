@@ -1,72 +1,61 @@
-import { Container, Typography, Box, Grid } from "@mui/material";
-import React from "react";
-import { Button } from "react-bootstrap";
-import "../Home/Home.css";
-const Footer = () => {
+import * as React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
+import Link from "@mui/material/Link";
+
+function Copyright() {
   return (
-    <div>
-      <Container
-        maxWidth="xl"
-        style={{
-          backgroundColor: "rgba(243, 239, 254)",
-          height: "200px",
-          color: "#192136",
-          position: "static",
-        }}>
-        <Box display="flex">
-          <Grid container spacing={2}>
-            <Grid
-              item
-              xs={6}
-              md={8}
-              style={{
-                marginTop: "20px",
-                marginLeft: "40px",
-              }}>
-              <Typography variant="h6" className="cards-name">
-                Courses
-              </Typography>
-              <Typography variant="h6" className="cards-name">
-                Favourites
-              </Typography>
-              <Typography variant="h6" className="cards-name">
-                About Us
-              </Typography>
-              <img
-                style={{
-                  borderRadius: "50px",
-                  height: "50px",
-                  width: "50px",
-                  justifyContent: "center",
-                }}
-                src="https://www.creativefabrica.com/wp-content/uploads/2021/01/23/Letter-S-SS-Logo-Design-Simple-Vector-Graphics-8004353-1-312x208.jpg"
-              />
-            </Grid>
-          </Grid>
-          <Grid container spacing={2}>
-            <Grid
-              item
-              xs={6}
-              md={8}
-              style={{
-                marginTop: "20px",
-                marginLeft: "40px",
-              }}>
-              <Typography variant="h6" className="cards-name">
-                Stay tuned with us!
-              </Typography>
-
-              <Button
-                size="md"
-                style={{ marginTop: "10px", backgroundColor: "#192136" }}>
-                Subscribe
-              </Button>
-            </Grid>
-          </Grid>
-        </Box>
-      </Container>
-    </div>
+    <Typography variant="body2" color="text.secondary">
+      {"Copyright © "}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
   );
-};
+}
 
-export default Footer;
+export default function Footer() {
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "50vh",
+        marginTop: "10px",
+      }}>
+      <CssBaseline />
+      <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
+        <Typography variant="h2" component="h1" gutterBottom>
+          Subscribe to uor channel on telegram!{" "}
+        </Typography>
+        <Typography variant="h5" component="h2" gutterBottom>
+          {"Pin a footer to the bottom of the viewport."}
+          {"The footer will move as the main element of the page grows."}
+        </Typography>
+        <Typography variant="body1">Sticky footer placeholder.</Typography>
+      </Container>
+      <Box
+        component="footer"
+        sx={{
+          py: 3,
+          px: 2,
+          mt: "auto",
+          backgroundColor: theme =>
+            theme.palette.mode === "light"
+              ? theme.palette.grey[200]
+              : theme.palette.grey[800],
+        }}>
+        <Container maxWidth="sm">
+          <Typography variant="body1">
+            My sticky footer can be found here.
+          </Typography>
+          <Copyright />
+        </Container>
+      </Box>
+    </Box>
+  );
+}

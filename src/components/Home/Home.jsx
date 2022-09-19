@@ -8,13 +8,18 @@ import {
   CardMedia,
   Divider,
 } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Home.css";
 const Home = () => {
   const navigate = useNavigate();
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="box">
       <div
@@ -26,13 +31,19 @@ const Home = () => {
           justifyContent: "center",
           alignItems: "center",
         }}>
-        <Typography className="txt" variant="h3" md={8}>
+        <Typography
+          data-aos="zoom-out-down"
+          className="txt"
+          variant="h3"
+          md={8}>
           Online courses that inspire
         </Typography>
         <Typography
           variant="h4"
           style={{ textAlign: "center", marginTop: "20px" }}
-          className="txt">
+          className="txt"
+          data-aos="zoom-out"
+          data-aos-duration="2000">
           Explore with us
         </Typography>
         <Button
@@ -71,13 +82,17 @@ const Home = () => {
           <Typography
             className="txt"
             variant="h3"
-            style={{ marginBottom: "30px" }}>
+            style={{ marginBottom: "30px" }}
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
             We have lots of
           </Typography>
           <Typography
             className="txt"
             variant="h3"
-            style={{ marginBottom: "30px" }}>
+            style={{ marginBottom: "30px" }}
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom">
             offers for you!
           </Typography>
           <Button
@@ -126,7 +141,12 @@ const Home = () => {
           marginTop: "60px",
           width: "100%",
         }}>
-        <div className="txt">New Courses Starting this week </div>
+        <div
+          className="txt"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom">
+          New Courses Starting this week{" "}
+        </div>
       </Box>
       <Box>
         <Box
@@ -138,7 +158,10 @@ const Home = () => {
           }}>
           <Card
             sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
-            style={{ margin: "0px 30px 20px 20px", borderRadius: "30px" }}>
+            style={{ margin: "0px 30px 20px 20px", borderRadius: "30px" }}
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000">
             <Box
               sx={{
                 display: "flex",
@@ -169,6 +192,9 @@ const Home = () => {
           </Card>
 
           <Card
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
             style={{ margin: "0 30px 20px 20px", borderRadius: "30px" }}>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -197,18 +223,22 @@ const Home = () => {
         <Box
           style={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-evenly",
             flexWrap: "wrap",
             marginTop: "30px",
           }}>
           <Card
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
             style={{ margin: "0 30px 20px 20px", borderRadius: "30px" }}>
             <Box
-              sx={{
+              style={{
                 display: "flex",
-                flexDirection: "column",
-                backgroundColor: "grey",
+                justifyContent: "space-evenly",
+                flexWrap: "wrap",
+                marginTop: "60px",
               }}>
               <CardContent sx={{ flex: "1 0 auto" }}>
                 <Typography component="div" variant="h5" className="cards-name">
@@ -232,6 +262,9 @@ const Home = () => {
             />
           </Card>
           <Card
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
             sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
             style={{ margin: "0 30px 20px 30px", borderRadius: "30px" }}>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -257,83 +290,7 @@ const Home = () => {
             />
           </Card>
         </Box>
-        <Box
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            flexWrap: "wrap",
-            marginTop: "30px ",
-            marginBottom: "30px",
-          }}>
-          <Card
-            sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
-            style={{ margin: "0 30px 20px 20px", borderRadius: "30px" }}>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                backgroundColor: "grey",
-              }}>
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <Typography component="div" variant="h5" className="cards-name">
-                  Become a cenitel of art with us{" "}
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  color="text.secondary"
-                  component="div"
-                  style={{ cursor: "pointer", fontWeight: "bold" }}
-                  onClick={() => navigate("/list")}>
-                  Click for more info →
-                </Typography>
-              </CardContent>
-            </Box>
-            <CardMedia
-              component="img"
-              sx={{ width: 250 }}
-              image="https://static.tildacdn.com/tild3637-6630-4936-a465-643236653636/__1-01.png"
-              alt="Live from space album cover"
-            />
-          </Card>
-          <Card
-            sx={{ display: "flex", maxWidth: "500px", height: "200px" }}
-            style={{ margin: "0 30px 20px 30px", borderRadius: "30px" }}>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <CardContent sx={{ flex: "1 0 auto" }}>
-                <Typography component="div" variant="h5" className="cards-name">
-                  Critical thinking
-                </Typography>
-                <Typography
-                  variant="subtitle1"
-                  color="text.secondary"
-                  component="div"
-                  style={{ cursor: "pointer", fontWeight: "bold" }}
-                  onClick={() => navigate("/list")}>
-                  Click for more info →
-                </Typography>
-              </CardContent>
-            </Box>
-            <CardMedia
-              component="img"
-              sx={{ width: 250 }}
-              image="https://static.tildacdn.com/tild3536-6430-4239-a532-343731353930/__1.png"
-              alt="Live from space album cover"
-            />
-          </Card>
-        </Box>
       </Box>
-      {/* <div style={{ width: "100%", height: "400px" }}>
-      <video
-        src="https://youtu.be/P2DuTW36VHw"
-        muted
-        autoPlay={"autoplay"}
-        preload="auto"
-        loop
-        style={{ borderRadius: "15px", width: "100%" }}>
-        {" "}
-        something
-      </video>
-    </div> */}
     </div>
   );
 };

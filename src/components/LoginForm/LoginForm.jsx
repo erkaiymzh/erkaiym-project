@@ -28,6 +28,8 @@ const LoginForm = () => {
         padding: "10px",
         width: "400px",
         textAlign: "center",
+        backgroundColor: "white",
+        color: "black",
       }}>
       <Typography variant="h5">
         Welcome back! Please, log in to use your account
